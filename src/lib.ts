@@ -1,7 +1,6 @@
-import axios from "axios";
 import { Bot } from "grammy";
 
-const bot = new Bot("7710462420:AAEiu9lBK2C8esRdTQzXqg6Fu4tNxrbXaTk");
+const bot = new Bot(process.env.TELEGRAM!);
 
 function transformToTitleCase(input: string): string {
   return input
