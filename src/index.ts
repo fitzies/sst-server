@@ -9,14 +9,14 @@ bot.on("message_reaction", async (ctx) => {
     return;
   }
 
+  await approveSST(ctx.messageReaction.message_id.toString());
+  // await sendToGroupChat("Hello");
+});
+
 bot.on("message", async (ctx) => {
     const chatID = ctx.chatId;
     bot.api.sendMessage(chatId, `${JSON.stringify(chatID}`);
 }
-
-  await approveSST(ctx.messageReaction.message_id.toString());
-  // await sendToGroupChat("Hello");
-});
 
 bot.start({
   allowed_updates: ["message", "message_reaction", "message_reaction_count"],
