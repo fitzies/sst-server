@@ -14,10 +14,10 @@ bot.on("message_reaction", async (ctx) => {
 });
 
 bot.on("message", async (ctx) => {
-    const chatID = ctx.chatId;
-    
-    bot.api.sendMessage(chatId, `${JSON.stringify(chatID)}`);
-}
+    const chatID = ctx.chat.id;
+
+    bot.api.sendMessage(chatID, `${JSON.stringify(chatID)}`);
+});
 
 bot.start({
   allowed_updates: ["message", "message_reaction", "message_reaction_count"],
