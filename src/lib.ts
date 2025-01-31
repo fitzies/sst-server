@@ -1,6 +1,4 @@
-import { Bot } from "grammy";
-
-const bot = new Bot(process.env.TELEGRAM!);
+import { bot } from "./index.ts";
 
 function transformToTitleCase(input: string): string {
   return input
