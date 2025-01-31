@@ -22,3 +22,5 @@ bot.on("message", async (ctx) => {
 bot.start({
   allowed_updates: ["message", "message_reaction", "message_reaction_count"],
 });
+
+export { bot }
