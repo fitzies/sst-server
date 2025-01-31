@@ -15,7 +15,8 @@ bot.on("message_reaction", async (ctx) => {
 
 bot.on("message", async (ctx) => {
     const chatID = ctx.chatId;
-    bot.api.sendMessage(chatId, `${JSON.stringify(chatID}`);
+    
+    bot.api.sendMessage(chatId, `${JSON.stringify(chatID)}`);
 }
 
 bot.start({
